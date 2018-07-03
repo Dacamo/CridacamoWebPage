@@ -9,6 +9,8 @@ namespace CridacamoWebPage.Models
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+        public DbSet<Post> Posts { get; set;}
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType
@@ -29,5 +31,7 @@ namespace CridacamoWebPage.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<CridacamoWebPage.Models.Post> Posts { get; set; }
     }
 }
