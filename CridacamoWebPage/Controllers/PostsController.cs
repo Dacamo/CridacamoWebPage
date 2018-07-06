@@ -10,7 +10,7 @@ using CridacamoWebPage.Models;
 
 namespace CridacamoWebPage.Controllers
 {
-    
+    [Authorize]
     public class PostsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -51,6 +51,7 @@ namespace CridacamoWebPage.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.Date = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
