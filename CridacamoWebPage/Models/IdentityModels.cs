@@ -10,6 +10,9 @@ namespace CridacamoWebPage.Models
     public class ApplicationUser : IdentityUser
     {
         public DbSet<Post> Posts { get; set;}
+        public DbSet<LoginViewModel> loginViewModels { get; set; }
+        
+       
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

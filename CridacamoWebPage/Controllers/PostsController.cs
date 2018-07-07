@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CridacamoWebPage.Models;
+using Microsoft.AspNet.Identity;
 
 namespace CridacamoWebPage.Controllers
 {
@@ -52,6 +53,7 @@ namespace CridacamoWebPage.Controllers
             if (ModelState.IsValid)
             {
                 post.Date = DateTime.Now;
+                post.Author = User.Identity.GetUserId();
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");

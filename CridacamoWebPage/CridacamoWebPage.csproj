@@ -210,6 +210,22 @@
     <Compile Include="Migrations\201807030453048_Posts.Designer.cs">
       <DependentUpon>201807030453048_Posts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807060154513_obligatory property.cs" />
+    <Compile Include="Migrations\201807060154513_obligatory property.Designer.cs">
+      <DependentUpon>201807060154513_obligatory property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807070246414_Fk pot.cs" />
+    <Compile Include="Migrations\201807070246414_Fk pot.Designer.cs">
+      <DependentUpon>201807070246414_Fk pot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807070305192_fk posts.cs" />
+    <Compile Include="Migrations\201807070305192_fk posts.Designer.cs">
+      <DependentUpon>201807070305192_fk posts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807070311427_No required Author.cs" />
+    <Compile Include="Migrations\201807070311427_No required Author.Designer.cs">
+      <DependentUpon>201807070311427_No required Author.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -305,6 +321,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807030453048_Posts.resx">
       <DependentUpon>201807030453048_Posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807060154513_obligatory property.resx">
+      <DependentUpon>201807060154513_obligatory property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807070246414_Fk pot.resx">
+      <DependentUpon>201807070246414_Fk pot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807070305192_fk posts.resx">
+      <DependentUpon>201807070305192_fk posts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807070311427_No required Author.resx">
+      <DependentUpon>201807070311427_No required Author.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

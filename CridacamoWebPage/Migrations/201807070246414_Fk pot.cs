@@ -1,0 +1,22 @@
+namespace CridacamoWebPage.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Fkpot : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.Posts", "Author", c => c.String(maxLength: 128));
+            CreateIndex("dbo.Posts", "Author");
+            AddForeignKey("dbo.Posts", "Author", "dbo.AspNetUsers", "Id");
+        }
+        
+        public override void Down()
+        {
+            DropForeignKey("dbo.Posts", "Author", "dbo.AspNetUsers");
+            DropIndex("dbo.Posts", new[] { "Author" });
+            AlterColumn("dbo.Posts", "Author", c => c.String());
+        }
+    }
+}
