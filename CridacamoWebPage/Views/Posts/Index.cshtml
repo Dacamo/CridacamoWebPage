@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<CridacamoWebPage.Models.Post>
+@using Microsoft.AspNet.Identity;
 
 
 @{
     ViewBag.Title = "Index";
+    ViewBag.Userid = User.Identity.GetUserId();
 }
 
 <h2>Index</h2>
+<h2>@ViewBag.userid</h2>
 
 
 <p>

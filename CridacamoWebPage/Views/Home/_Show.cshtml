@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CridacamoWebPage.Models.Post>
+
+    <div class="list-group">
+        
+        @foreach (var item in Model)
+        {
+        <a data-url="@Url.Content(string.Format("~/Home/Show/{0}", item.Author))"
+           class="list-group-item">
+                @item.Name
+                @item.Content
+                @item.Date.Year
+        </a>
+        }
+    </div>
+    </div>
